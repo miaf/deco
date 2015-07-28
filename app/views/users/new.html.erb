@@ -1,0 +1,13 @@
+<section>
+	<header>
+		<h1>Registration</h1>
+		<p>Please fill out the form bellow.</p>
+	</header>
+	<div>
+		<%= form_for @user, url: create_user_path do |f| %>
+			<fieldset>
+				<p><%= f.submit %></p>
+			</fieldset>
+		<% end %>
+	</div>
+</section>
