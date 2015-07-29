@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
    get 'sign_up' => 'users#new', as: 'sign_up'
    post 'create' => 'users#create', as: :create_user
+
+   resources :users
 end

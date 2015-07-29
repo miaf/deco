@@ -4,7 +4,18 @@
 		<p>Please fill out the form bellow.</p>
 	</header>
 	<div>
-		<%= form_for @user, url: create_user_path do |f| %>
+		<%= form_for @user, url: create_user_path, html: {multipart: true} do |f| %>
+			<% if @user.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@user.errors.count, "error") %>
+					prohibited this user from being saved:</h2>
+					<ul>
+						<% @user.errors.full_messages.each do |msg| %>
+							<li><%= msg %></li>
+						<% end %>
+					</ul>
+				</div>
+			<% end %>
 			<fieldset>
 				<legend>User Details</legend>
 					<div class="user-group">
@@ -119,7 +130,10 @@
 					<h2>User Address Details</h2>
 						<div>
 							<div class="user-label"><%= f.label :country %></div>
-							<div class="user-field"><%= f.text_field :country %></div>
+							<div class="user-field"><%= f.country_code_select(:country) %></div>
+							<!-- <div>
+								<%= f.text_field :country %>
+							</div> -->
 							
 						</div>
 						<div>
