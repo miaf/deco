@@ -6,7 +6,154 @@
 	<div>
 		<%= form_for @user, url: create_user_path do |f| %>
 			<fieldset>
-				<p><%= f.submit %></p>
+				<legend>User Details</legend>
+					<div class="user-group">
+					<h2>User Detail</h2>
+						<div>
+							<div class="user-label"><%= f.label :first_name, "First Name" %></div>
+							<div class="user-field"><%= f.text_field :first_name %></div>					
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :last_name, "Last Name" %></div>
+							<div class="user-field"><%= f.text_field :last_name %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :date_of_birth, "Date of birth" %></div>
+							<div class="user-field"><%= f.date_field :date_of_birth %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :place_of_birth %></div>
+							<div class="user-field"><%= f.text_field :place_of_birth %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :nationality %></div>
+							<div class="user-field"><%= f.text_field :nationality %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :id_ref_type, "Choose your identifier type" %></div>
+							<div class="user-field"><select name="user[id_ref_type]", id="user_id_ref_type">
+							  <option>NIC</option>
+							  <option>Passport</option>
+							</select></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :id_ref_numb %></div>
+							<div class="user-field"><%= f.text_field :id_ref_numb %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :id_ref_made_at %></div>
+							<div class="user-field"><%= f.text_field :id_ref_made_at %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :id_ref_expired_at %></div>
+							<div class="user-field"><%= f.date_field :id_ref_expired_at %></div>
+							
+							
+						</div>						
+					</div>
+					<div class="user-group">
+					<h2>User Login Details</h2>
+						<div>
+							<div class="user-label"><%= f.label :login_name %></div>
+							<div class="user-field"><%= f.text_field :login_name %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :password %></div>
+							<div class="user-field"><%= f.password_field :password %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :password_confirmation %></div>
+							<div class="user-field"><%= f.password_field :password_confirmation %></div>
+							
+							
+						</div>					
+					</div>
+					<div class="user-group">
+					<h2>User Contact Details</h2>
+						<div>
+							<div class="user-label"><%= f.label :email %></div>
+							<div class="user-field"><%= f.email_field :email %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :mobile %></div>
+							<div class="user-field"><%= f.text_field :mobile %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :telephone %></div>
+							<div class="user-field"><%= f.text_field :telephone %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :fax %></div>
+							<div class="user-field"><%= f.text_field :fax %></div>
+							
+							
+						</div>
+										
+					</div>
+					<div class="user-group">
+					<h2>User Address Details</h2>
+						<div>
+							<div class="user-label"><%= f.label :country %></div>
+							<div class="user-field"><%= f.text_field :country %></div>
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :town %></div>
+							<div class="user-field"><%= f.text_field :town %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :quarter %></div>
+							<div class="user-field"><%= f.text_field :quarter %></div>
+							
+							
+						</div>
+						<div>
+							<div class="user-label"><%= f.label :street %></div>
+							<div class="user-field"><%= f.text_field :street %></div>
+							
+							
+						</div>										
+					</div>
+					<div class="user-group">
+					<h2>User Description</h2>
+						<div>
+							<%= f.text_area :description, size: "60x12" %>
+						</div>			
+					</div>
+					<div class="user-group">
+						<h2>Upload a picture for your profile</h2>
+						<div>
+							<%= f.file_field :image_profile, accept: 'image/png, image/gif, image/jpeg' %>
+						</div>
+					</div>
+				<p><%= f.submit 'Submit', id: 'btn_submit', class: 'btn_submit'  %></p>
 			</fieldset>
 		<% end %>
 	</div>

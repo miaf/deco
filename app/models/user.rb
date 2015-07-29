@@ -37,6 +37,7 @@ class User < ActiveRecord::Base
 	validates_presence_of :email, message: ""
 	validates_length_of :email, in: 5..30, message: "between 3 and 30 characters"
 	validates_uniqueness_of :email
+	validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
 
 	validates_presence_of :mobile, message: ""
 	validates_length_of :mobile, in: 10..15, message: "between 3 and 30 characters"

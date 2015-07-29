@@ -1,3 +1,41 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_user fieldset{
+	margin: 2% 30%;
+	padding: 2% 20%;
+	width: 100%;
+}
+#new_user fieldset legend{
+	text-align: center;
+	font-size: 200%;
+}
+#new_user fieldset .user-group{
+	border: 1px solid black;
+	padding: 1%;
+	margin: 1%;
+	border-radius: 15px;
+}
+#new_user fieldset .user-label{
+	width: 42%;
+	padding: 1%;
+	margin: 1%;
+}
+#new_user fieldset .user-field{
+	width: 50%;
+}
+#new_user fieldset .user-field, #new_user fieldset .user-label{
+	display: inline-block;
+	font-size: 120%;
+}
+#new_user fieldset .user-field input, #new_user fieldset .user-field select{
+	width: 100%;
+	padding: 1%;
+	padding: 1%;
+	font-size: 110%;
+}
+#new_user fieldset div h2{
+	text-align: center;
+	color: #0000ff;
+}

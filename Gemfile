@@ -65,3 +65,4 @@ gem "mini_magick"
 gem 'carrierwave'
 
 gem 'tinymce-rails'
+# gem 'country-select'

@@ -17,4 +17,14 @@
 body{
 	margin: 1%;
 	padding: 1%;
+	display: inline-block;
+}
+
+/*CLASSES*/
+.btn_submit{
+	width: 20%;
+	font-size: 140%;
+	background-color: #e4f609;
+	border-radius: 7px;
+	padding: 1%;
 }
