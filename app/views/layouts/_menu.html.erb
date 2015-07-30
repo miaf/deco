@@ -1,9 +1,13 @@
-<nav>
+<nav id="menu">
 	<ul>
 		<li><%= link_to 'Home', root_path %> </li>
 		<li><%= link_to 'About us', about_path %> </li>
-		<li><%= link_to 'Join us', sign_up_path %> </li>
-		<li><%= link_to 'Home', root_path %> </li>
-		<li><%= link_to 'Home', root_path %> </li>
+		<% if !current_user %>
+			<li><%= link_to 'Join us', sign_up_path %> </li>
+		<% else %>
+			<li><%= link_to 'Your gallery', root_path %> </li>
+		<% end %>
+		
+		<li><%= link_to 'Galleries', root_path %> </li>
 	</ul>
 </nav>

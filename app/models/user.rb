@@ -62,8 +62,8 @@ class User < ActiveRecord::Base
 	validates_presence_of :image_profile
 
 
-	def self.authenticate(email)
-    user = User.find_by_email(email)
+  def self.authenticate(login_name, password)
+    user = User.find_by_login_name(login_name)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       return user
     else

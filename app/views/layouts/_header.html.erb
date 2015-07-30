@@ -1,3 +1,9 @@
-<header>
-	Header
+<header id="header">
+	<div>
+		<% if current_user %>
+			Welcome <%= current_user %> <%= link_to "Log out", log_out_path %>
+		<% else %>
+			<%= link_to "Log in", log_in_path %>
+		<% end %>
+	</div>
 </header>

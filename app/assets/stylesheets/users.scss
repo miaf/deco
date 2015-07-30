@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #new_user fieldset{
-	margin: 2% 30%;
-	padding: 2% 20%;
-	width: 100%;
+	margin: 2% auto;
+	padding: 2% auto;
+	width: 60%;
 }
 #new_user fieldset legend{
 	text-align: center;
@@ -18,22 +18,28 @@
 	border-radius: 15px;
 }
 #new_user fieldset .user-label{
-	width: 42%;
 	padding: 1%;
 	margin: 1%;
+	text-align: left;
 }
 #new_user fieldset .user-field{
-	width: 50%;
+	text-align: right;
 }
 #new_user fieldset .user-field, #new_user fieldset .user-label{
 	display: inline-block;
 	font-size: 120%;
+	width: 30%;
 }
-#new_user fieldset .user-field input, #new_user fieldset .user-field select{
+#new_user fieldset .user-field input,
+#new_user fieldset .user-field select{
 	width: 100%;
 	padding: 1%;
 	padding: 1%;
 	font-size: 110%;
+}
+#new_user fieldset text-area{
+	margin: 2% auto;
+	padding: 2% auto;
 }
 #new_user fieldset div h2{
 	text-align: center;
